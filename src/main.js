@@ -8,5 +8,6 @@ $(document).ready(function() {
   $('.submit').click(function() {
     let symptom = $('#symptoms').val();
     $('#symptoms').val('');
+    
   })
 });
