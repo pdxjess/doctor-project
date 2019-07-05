@@ -10,6 +10,16 @@ $(document).ready(function() {
     $('#symptoms').val("");
     $.ajax({
       url: ''
+      ,
+      type:'GET', 
+      data: {
+        format: 'json'
+      },
+      success: function(response) {
+        $('').text('');
+        $('').text('');
+      },
+      }
     })
   })
 });
