@@ -15,7 +15,7 @@ _A search engine that will give you suggestions for doctors in your area based o
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
 | User searches for a doctor and output will show their information. | Ben Gibbard MD | Ben Gibbard MD, address, phone number |
-| User searches by symptoms and output will return a list of doctors that treat those symptoms | Fever, Chills, Headache | Ben Gibbard MD; Allison Smith MD; Mia Ryans MD; etc |
+| User searches by symptoms and output will return a list of doctors that treat those symptoms | Fever, Chills, Headache | Ben Gibbard MD; Allison Smith MD; Mia Ryans MD; etc | 
 
 
 
