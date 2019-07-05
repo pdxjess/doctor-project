@@ -8,18 +8,5 @@ $(document).ready(function() {
   $('.submit').click(function() {
     let symptom = $('#symptoms').val();
     $('#symptoms').val("");
-    $.ajax({
-      url: ''
-      ,
-      type:'GET', 
-      data: {
-        format: 'json'
-      },
-      success: function(response) {
-        $('').text('');
-        $('').text('');
-      },
-      }
-    })
   })
 });
