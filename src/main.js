@@ -11,6 +11,6 @@ $(document).ready(function() {
     let doctor = $('#doctor').val();
     $('#symptoms').val('');
     $('#doctor').val('');
-    $('#result').append("<li>""</li>");
+    $('#result').append('<li>' + '</li>');
   })
 });
