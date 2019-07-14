@@ -5,9 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 $(document).ready(function() {
-  $('.submit').click(function() {
-    let symptom = $('#symptoms').val();
+  $('#resultSearch').submit(function(event) {
+    event.preventDefault();
+    let condition = $('#condition').val();
+    let doctor = $('#doctor').val();
     $('#symptoms').val('');
-    
+    $('#doctor').val('');
+    $('#result').append("<li>" + i + "</li>");
   })
 });
