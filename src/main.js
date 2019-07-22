@@ -2,7 +2,7 @@ import { Doctor } from './doctor.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import '../css/styles.css';
 
 $(document).ready(function() {
   $('#form').submit(function(event) {
@@ -17,9 +17,10 @@ $(document).ready(function() {
 
     promise.then(function (response) {
       let body = JSON.parse(response);
+      console.log(body);
 
       if (body.data.length === 0) {
-        $('#result').append('There are no doctors for your search in this area.');
+        $('#result').append('There are no doctors for this search in your area.');
         }
       for (let i = 0; i < body.data.length; i++) {
         $('#result').append(`<strong>Name:</strong> ${body.data[i].profile.first_name} ${body.data[i].profile.last_name}<br>
@@ -31,7 +32,7 @@ $(document).ready(function() {
         ${body.data[i].practices[0].email}<br>
         <strong>Accepting New Patients:</strong> ${body.data[i].practices[0].accepts_new_patients}<br> <br> <hr>`);
         }
-        }, function (error) {
+      }, function (error) {
         $('#result').text(`There was an error processing your request: ${error.message}`);
        });
      });
